@@ -23,7 +23,7 @@ public class PostRequestTest {
 		
 		given().header("Content-Type","application/json").body(RequestBody1)
 		.when().post("products/add")
-		.then().statusCode(200).body("title",equalTo("BMW"))
+		.then().statusCode(201).body("title",equalTo("BMW"))
 				 .body("id", notNullValue()) 
 				 .log().all();
 	}
