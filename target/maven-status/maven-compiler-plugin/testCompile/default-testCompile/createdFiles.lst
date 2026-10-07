@@ -1,1 +1,3 @@
+com\test\api\PostRequestTest.class
+com\test\api\PutRequestTest.class
 com\test\api\GetRequestTest.class
