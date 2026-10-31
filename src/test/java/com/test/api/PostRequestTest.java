@@ -19,7 +19,7 @@ public class PostRequestTest {
 	
 		Map<String,Object>RequestBody1= new HashMap<String, Object>();
 		RequestBody1.put("title","BMW");
-		RequestBody1.put("id","123");
+		RequestBody1.put("id","13");
 		
 		given().header("Content-Type","application/json").body(RequestBody1)
 		.when().post("products/add")
