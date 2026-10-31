@@ -7,11 +7,17 @@ pipeline {
         // Map your exact JDK installation directory
         JAVA_HOME  = 'C:\\Program Files\\Java\\jdk-21.0.11'
     }
-
+  triggers {
+        // REMOVE OR COMMENT OUT: pollSCM('* * * * *') 
+        
+        // ADD THIS: Instructs Jenkins to listen for incoming GitHub push webhooks
+        githubPush() 
+    }
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/veena-bharata/RestAssured'
+               // git branch: 'main', url: 'https://github.com/veena-bharata/RestAssured'
+           checkout scm
             }
         }
 
