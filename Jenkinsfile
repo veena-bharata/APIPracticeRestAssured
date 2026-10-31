@@ -16,8 +16,9 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-               // git branch: 'main', url: 'https://github.com/veena-bharata/RestAssured'
+               // git branch: 'main', url: 'https://github.com/veena-bharata/APIPracticeRestAssured'
            checkout scm
+           
             }
         }
 
